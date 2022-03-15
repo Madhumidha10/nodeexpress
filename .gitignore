@@ -1,0 +1,4 @@
+# git untrack files declared here
+
+node_modules
+.env
