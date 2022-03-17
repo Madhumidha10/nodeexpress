@@ -12,6 +12,10 @@ export async function deleteAllMovie() {
 export async function insertAllMovie(data) {
   return await client.db("b30wd").collection("movies").insertMany(data);
 }
+export async function insertOneMovie(data) {
+  return await client.db("b30wd").collection("movies").insertOne(data);
+}
+
 export async function getMovieByID(id) {
   return await client.db("b30wd").collection("movies").findOne({ id: id });
 }

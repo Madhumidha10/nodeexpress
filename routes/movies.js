@@ -26,6 +26,12 @@ router.post("/", async function (request, response) {
   const result = await insertAllMovie(data);
   response.send(result);
 });
+router.post("/add", async function (request, response) {
+  // db.movies.insertMany(data)
+  const data = request.body;
+  const result = await insertOneMovie(data);
+  response.send(result);
+});
 router.delete("/:id", async function (request, response) {
   const { id } = request.params;
   const delRes = await deleteMovieById(id);
